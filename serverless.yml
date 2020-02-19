@@ -97,8 +97,15 @@ functions:
 #            path: /hello
 
 #    Define function environment variables here
-#    environment:
-#      variable2: value2
+    environment:
+      SENDGRID_API_KEY: ${param:SENDGRID_API_KEY}
+      TESLA_API_AUTH_TOKEN: ${param:TESLA_API_AUTH_TOKEN}
+      TESLA_VEHICLE_ID: ${param:TESLA_VEHICLE_ID}
+      HOME_LATITUDE: ${param:HOME_LATITUDE}
+      HOME_LONGITUDE: ${param:HOME_LONGITUDE}
+      EMAIL_TO: ${param:EMAIL_TO}
+      EMAIL_FROM: ${param:EMAIL_FROM}
+
 
 # you can add CloudFormation resource templates here
 #resources:
