@@ -16,7 +16,7 @@ module.exports.reminder = (event, context, callback) => {
       const carLocation = [driveState.latitude, driveState.longitude];
       const homeLocation = [process.env.HOME_LATITUDE, process.env.HOME_LONGITUDE];
       const distance = geolib.getDistance(carLocation, homeLocation);
-      const shouldSendTextMessage = distance < 100 && (chargeState.charging_state !== "Charging" || chargeState.charging_state !== "Complete");
+      const shouldSendTextMessage = distance < 100 && (chargeState.charging_state !== "Charging" && chargeState.charging_state !== "Complete");
 
       if (shouldSendTextMessage) {
         const msg = {
