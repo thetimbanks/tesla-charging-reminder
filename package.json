@@ -1,0 +1,12 @@
+{
+  "name": "charging-reminder",
+  "version": "1.0.0",
+  "main": "handler.js",
+  "author": "Timothy Banks",
+  "license": "MIT",
+  "dependencies": {
+    "@sendgrid/mail": "^6.5.2",
+    "geolib": "^3.2.1",
+    "teslajs": "^4.7.7"
+  }
+}
