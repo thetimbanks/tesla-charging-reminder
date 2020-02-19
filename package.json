@@ -7,10 +7,12 @@
   "dependencies": {
     "@sendgrid/mail": "^6.5.2",
     "geolib": "^3.2.1",
+    "lodash": "^4.17.15",
     "teslajs": "^4.7.7"
   },
   "scripts": {
-    "invoke": "serverless invoke -f reminder -l --org thetimbanks --app my-first-app",
+    "invoke": "sls invoke -f reminder -l --org thetimbanks --app my-first-app",
+    "invokelocal": "sls invoke local --function reminder --org thetimbanks --app my-first-app",
     "deploy": "sls deploy --org thetimbanks --app my-first-app"
   }
 }
